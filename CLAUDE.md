@@ -45,6 +45,26 @@ Nie pisz „powinno działać”. Jeśli czegoś nie uruchomiono, napisz to wpro
 
 Gdy człowiek wykryje twój błąd, zaproponuj wpis przez `/agent-log`.
 
+## Review
+
+Każda zmiana idzie przez PR i pętlę `/code-review` (poziom `low` lub `medium`). Cały proces: `docs/review.md`.
+
+## Delegowanie kodowania do subagentów
+
+Zadania z kodowania deleguj do subagentów, dobierając model do trudności i ryzyka:
+
+| Model | Kiedy | Przykłady |
+|---|---|---|
+| `haiku` | Praca mechaniczna, bez decyzji w logice | zmiana nazw, formatowanie, DTO wygenerowane z kontraktu, poprawki w Dockerfile i dokumentacji |
+| `sonnet` | Typowa implementacja z jasnymi kryteriami akceptacji | endpoint REST, repozytorium, mapowanie, testy jednostkowe, symulatory |
+| nie deleguj (główny agent) | Kod dotykający zasad domenowych 1–6, transakcje, współbieżność, migracje schematu | licznik stanów, idempotentność, outbox, retry i DLQ |
+
+Zasady:
+- Subagent zaczyna bez kontekstu rozmowy. W poleceniu podaj: cel, kryteria akceptacji, pliki do zmiany, zasady domenowe, których zadanie dotyczy, i jak sprawdzić wynik.
+- Wynik subagenta nie jest „zrobiony”, dopóki główny agent sam nie uruchomi testów i nie przejrzy zmian.
+- Zmiana od subagenta przechodzi ten sam proces review co każda inna.
+- Gdy nie wiesz, który poziom wybrać, wybierz wyższy.
+
 ## Pamięć projektu
 
 Nie pamiętasz poprzednich rozmów. Zanim zaczniesz, przeczytaj `docs/ustalenia.md` i `docs/plan.md`.

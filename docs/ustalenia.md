@@ -6,6 +6,18 @@ Wpisy dodaje skill `/zapisz-ustalenia`. Najnowsze na górze. Wpisów się nie us
 
 ---
 
+### U-004: Delegowanie kodowania do subagentów według trudności
+- **Data:** 2026-11-07
+- **Ustalenie:** Zadania z kodowania agent deleguje do subagentów na modelu `haiku` albo `sonnet`, zależnie od trudności zadania. Szczegółowe zasady: `CLAUDE.md`, sekcja „Delegowanie kodowania do subagentów”.
+- **Dlaczego:** nie podano
+- **Status:** obowiązuje
+
+### U-003: Review przez PR i pętlę /code-review
+- **Data:** 2026-11-07
+- **Ustalenie:** Zmiana idzie jako PR do review. Review robi `/code-review` na poziomie `low` albo `medium`, nic wyżej. Po poprawkach review się powtarza, dopóki nie zostaną tylko małe uwagi. Szczegóły: `docs/review.md`.
+- **Dlaczego:** nie podano
+- **Status:** obowiązuje
+
 ### U-002: Agent zapisuje ustalenia sam, ale zatrzymuje się przy sprzecznościach
 - **Data:** 2026-11-07
 - **Ustalenie:** Agent sam zapisuje ustalenia z rozmowy w `docs/`, bez pytania o zgodę. Gdy nowe ustalenie koliduje z istniejącym zapisem, zatrzymuje się i pyta. Nie zmienia przyjętych ADR-ów, dziennika błędów agenta ani kontraktów.
