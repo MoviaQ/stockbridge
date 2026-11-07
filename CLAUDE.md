@@ -20,7 +20,7 @@ Właściciel repo uczy się Javy, Springa i systemów rozproszonych. Kod, które
 | `contracts/` (WSDL, OpenAPI) | człowiek | Nie zmieniaj. Jeśli kontrakt jest błędny lub niepełny, zgłoś to. |
 | `docs/adr/` | człowiek | Możesz przygotować szkic przez `/adr`, decyzję podejmuje człowiek. |
 | Testy scenariuszy awarii i współbieżności | człowiek | Nie osłabiaj ich, nie oznaczaj jako pominięte, nie zmieniaj oczekiwanych wartości, żeby przeszły. |
-| Implementacja, konfiguracja, testy jednostkowe | agent | Człowiek przegląda każdą zmianę. |
+| Implementacja, konfiguracja, testy jednostkowe | agent | Człowiek nie przegląda każdej zmiany. Poprawność pokazują dowody i pętla review (`docs/review.md`). |
 
 ## Zasady domenowe (łamanie ich to błąd, nie styl)
 
@@ -33,7 +33,17 @@ Właściciel repo uczy się Javy, Springa i systemów rozproszonych. Kod, które
 
 Przed oddaniem zmiany dotykającej zamówień, stanów lub kolejki uruchom `/przeglad-integracji`.
 
+## Komentarze w kodzie
+
+Nie pisz żadnych komentarzy w kodzie. Dotyczy to `//`, `/* */`, Javadoc, `TODO` i komentarzy w plikach konfiguracyjnych, SQL i Dockerfile.
+- Kod ma się tłumaczyć nazwami klas, metod i zmiennych.
+- Wyjaśnienia trafiają do artefaktu zmiany, opisu PR, ADR albo `docs/`.
+- Rzeczy do zrobienia trafiają do `docs/plan.md`, nie do `TODO` w kodzie.
+- Jeśli w zmienianym pliku są komentarze, usuń je w ramach zmiany.
+
 ## Raportowanie
+
+Właściciel chce zawsze widzieć dowody pracy. Praca bez dowodów nie jest skończona.
 
 Każde „zrobione” zawiera:
 1. **Wynik** – jedno zdanie.

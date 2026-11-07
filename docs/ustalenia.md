@@ -6,6 +6,24 @@ Wpisy dodaje skill `/zapisz-ustalenia`. Najnowsze na górze. Wpisów się nie us
 
 ---
 
+### U-007: Zakaz komentarzy w kodzie
+- **Data:** 2026-11-07
+- **Ustalenie:** Modele nie piszą żadnych komentarzy w kodzie. Zasada w `CLAUDE.md`, sekcja „Komentarze w kodzie”.
+- **Dlaczego:** nie podano
+- **Status:** obowiązuje
+
+### U-006: Zawsze dowody pracy
+- **Data:** 2026-11-07
+- **Ustalenie:** Właściciel chce mieć zawsze przedstawione dowody pracy agenta. Zasada w `CLAUDE.md`, sekcja „Raportowanie”.
+- **Dlaczego:** nie podano
+- **Status:** obowiązuje
+
+### U-005: Człowiek nie przegląda każdej zmiany; artefakt zmiany przed PR
+- **Data:** 2026-11-07
+- **Ustalenie:** Człowiek nie przegląda ręcznie każdej zmiany. Przed otwarciem PR i pierwszymi rundami `/code-review` agent generuje artefakt: co się zmieniło, w jaki sposób, z dowodami. Szczegóły: `docs/review.md`, krok 3.
+- **Dlaczego:** „W dzisiejszych czasach to nie ma sensu.”
+- **Status:** obowiązuje
+
 ### U-004: Delegowanie kodowania do subagentów według trudności
 - **Data:** 2026-11-07
 - **Ustalenie:** Zadania z kodowania agent deleguje do subagentów na modelu `haiku` albo `sonnet`, zależnie od trudności zadania. Szczegółowe zasady: `CLAUDE.md`, sekcja „Delegowanie kodowania do subagentów”.

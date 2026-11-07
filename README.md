@@ -21,7 +21,7 @@ Plan etapów: [docs/plan.md](docs/plan.md).
 Projekt powstaje we współpracy z agentem AI (Claude Code). Podział ról jest jawny:
 
 - kontrakty (`contracts/`), decyzje architektoniczne (`docs/adr/`) i testy scenariuszy awarii piszę sam,
-- agent implementuje według nich, a ja przeglądam każdą zmianę,
+- agent implementuje według nich, a każda zmiana przechodzi pętlę review i musi mieć dowody: testy, pomiary, wyniki uruchomień,
 - błędy agenta, które wykryłem, i to, jak je wykryłem, są w [docs/agent-log.md](docs/agent-log.md),
 - zasady pracy agenta: [CLAUDE.md](CLAUDE.md) i `.claude/skills/`.
 
