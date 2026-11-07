@@ -45,6 +45,11 @@ Nie pisz „powinno działać”. Jeśli czegoś nie uruchomiono, napisz to wpro
 
 Gdy człowiek wykryje twój błąd, zaproponuj wpis przez `/agent-log`.
 
+## Pamięć projektu
+
+Nie pamiętasz poprzednich rozmów. Zanim zaczniesz, przeczytaj `docs/ustalenia.md` i `docs/plan.md`.
+Gdy w rozmowie zapadnie ustalenie, zapisz je od razu skillem `/zapisz-ustalenia`, bez czekania na prośbę.
+
 ## Stan projektu
 
 - Etap: **0, przygotowanie repo**. Brak kodu.
@@ -65,4 +70,4 @@ docs/                 plan, ADR-y, agent-log, notatki z lektury, wyniki pomiaró
 
 ## Język
 
-Dokumentacja i komunikacja po polsku. Kod, nazwy klas, metod, tabel i commitów po angielsku.
+Zob. `docs/ustalenia.md`, U-001.
