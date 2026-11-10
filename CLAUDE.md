@@ -1,8 +1,9 @@
-# Ostatnia sztuka
+# Stockbridge
 
 Warstwa integracyjna między systemem ERP (SOAP) a kanałami sprzedaży (REST): sklep, Allegro, Zalando.
-Cel: overselling zdarza się rzadko, każdy przypadek jest wykryty i obsłużony automatycznie, a żadne zamówienie nie ginie.
-Projekt edukacyjny do portfolio. Opis problemu i architektury: `docs/plan.md`.
+Zakres: niezawodny przepływ zamówień do ERP, rozsyłanie stanów do kanałów, tłumaczenie między systemami, pilnowanie spójności danych, odporność na awarie.
+Główny scenariusz testowy i miernik: overselling. Opis zakresu i etapów: `docs/plan.md`.
+Projekt edukacyjny do portfolio.
 
 ## Tryb pracy: to jest projekt do nauki
 

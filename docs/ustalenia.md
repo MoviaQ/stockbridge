@@ -6,6 +6,12 @@ Wpisy dodaje skill `/zapisz-ustalenia`. Najnowsze na górze. Wpisów się nie us
 
 ---
 
+### U-008: Nazwa projektu Stockbridge i szerszy zakres
+- **Data:** 2026-11-10
+- **Ustalenie:** Projekt nazywa się Stockbridge (repo `MoviaQ/stockbridge`). System to warstwa integracyjna z pięcioma obszarami odpowiedzialności (`docs/plan.md`, „Zakres systemu”), a overselling jest głównym scenariuszem testowym, nie całym zakresem.
+- **Dlaczego:** „Ostatnia sztuka to nie jest jakaś fajna nazwa”; system nie mówi tylko o oversellingu.
+- **Status:** obowiązuje
+
 ### U-007: Zakaz komentarzy w kodzie
 - **Data:** 2026-11-07
 - **Ustalenie:** Modele nie piszą żadnych komentarzy w kodzie. Zasada w `CLAUDE.md`, sekcja „Komentarze w kodzie”.

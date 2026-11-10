@@ -1,6 +1,6 @@
 ---
 name: nowe-zadanie
-description: Rozpoczęcie nowego zadania w projekcie Ostatnia sztuka. Użyj na początku każdej nowej funkcji, modułu lub poprawki, zanim powstanie jakikolwiek kod. Ustala kryteria poprawności, zanim agent zacznie implementację.
+description: Rozpoczęcie nowego zadania w projekcie Stockbridge. Użyj na początku każdej nowej funkcji, modułu lub poprawki, zanim powstanie jakikolwiek kod. Ustala kryteria poprawności, zanim agent zacznie implementację.
 ---
 
 # Nowe zadanie

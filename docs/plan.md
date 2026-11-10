@@ -1,6 +1,18 @@
 # Plan projektu
 
-## Problem
+## Zakres systemu
+
+Stockbridge to warstwa integracyjna między ERP a kanałami sprzedaży. Odpowiada za:
+
+1. **Przepływ zamówień**: przyjęcie zamówienia z dowolnego kanału i dostarczenie go do ERP, bez gubienia i bez duplikatów.
+2. **Rozsyłanie stanów**: aktualizacja liczby dostępnych sztuk we wszystkich kanałach.
+3. **Tłumaczenie**: REST i JSON ↔ SOAP i XML, numery ofert w kanałach ↔ SKU w ERP.
+4. **Spójność**: wykrywanie rozjazdów między systemami (overselling, różnice po synchronizacji z ERP) i reakcja na nie.
+5. **Odporność**: działanie mimo awarii ERP i kanałów, obserwowalność.
+
+## Główny scenariusz: overselling
+
+Overselling to najtrudniejszy problem w tym zakresie i główny miernik projektu.
 
 Każdy kanał sprzedaży (Allegro, Zalando, własny sklep) trzyma własną kopię liczby dostępnych sztuk i sam decyduje o sprzedaży. O sprzedaży dowiadujemy się po fakcie. Czas między sprzedażą w jednym kanale a aktualizacją pozostałych to **okno niespójności**. Każda sprzedaż w tym oknie może być oversellingiem.
 

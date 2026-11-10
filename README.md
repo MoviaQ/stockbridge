@@ -1,12 +1,16 @@
-# Ostatnia sztuka
+# Stockbridge
 
-Sklep sprzedaje tę samą kurtkę w trzech miejscach: we własnym sklepie, na Allegro i na Zalando. Każdy z tych kanałów trzyma własną kopię stanu magazynowego i sprzedaje według niej. Gdy zostaje ostatnia sztuka, dwa kanały potrafią sprzedać ją jednocześnie.
+Warstwa integracyjna między starym systemem ERP a kanałami sprzedaży (własny sklep, Allegro, Zalando).
 
-Ten projekt to warstwa integracyjna między kanałami sprzedaży a systemem ERP. Ma sprawić, żeby:
+Co robi:
 
-- sprzedaż nieistniejącej sztuki zdarzała się rzadko,
-- każdy taki przypadek był wykryty i obsłużony automatycznie,
-- żadne zamówienie nie zginęło, nawet gdy ERP nie odpowiada.
+1. **Przyjmuje zamówienia ze wszystkich kanałów i dostarcza je do ERP.** Bez gubienia i bez duplikatów, także wtedy, gdy ERP nie odpowiada.
+2. **Rozsyła stany magazynowe do kanałów.** Szybko, z buforem bezpieczeństwa.
+3. **Tłumaczy między systemami.** REST i JSON po stronie kanałów, SOAP i XML po stronie ERP, numery ofert na SKU i odwrotnie.
+4. **Pilnuje spójności danych.** Wykrywa rozjazdy między systemami i reaguje na nie.
+5. **Jest odporny na awarie.** Ponawia operacje, odkłada nieudane wiadomości do DLQ, udostępnia metryki.
+
+Najtrudniejszy scenariusz, na którym system jest mierzony, to **overselling**. Każdy kanał trzyma własną kopię stanu i sprzedaje według niej. Gdy zostaje ostatnia sztuka, dwa kanały potrafią sprzedać ją jednocześnie.
 
 Projekt jest edukacyjny. Marka i scenariusz są wymyślone.
 
